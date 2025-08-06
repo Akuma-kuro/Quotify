@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .glass-button {
+    @apply glass rounded-2xl px-6 py-3 transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-2xl active:scale-95;
+  }
+  
+  .glass-input {
+    @apply glass rounded-xl px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300;
+  }
+  
+  .ping-green {
+    @apply bg-ping-green/20 border-ping-green/40 text-ping-green shadow-lg shadow-ping-green/20;
+  }
+  
+  .ping-yellow {
+    @apply bg-ping-yellow/20 border-ping-yellow/40 text-ping-yellow shadow-lg shadow-ping-yellow/20;
+  }
+  
+  .ping-red {
+    @apply bg-ping-red/20 border-ping-red/40 text-ping-red shadow-lg shadow-ping-red/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Focus styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-white/30 ring-offset-2 ring-offset-transparent;
+}
