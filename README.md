@@ -1,93 +1,35 @@
 # Quotify
 
-A premium, minimal web app disguised as a simple "Quote of the Day" generator, featuring a hidden friend list and ping system accessible only after authentication.
+A private, minimal, and modern web app that starts as a simple "Quote of the Day" site but secretly expands into a full friends-based pinging system once logged in.
 
 ## Features
 
-### Public Features
-- **Quote of the Day**: Beautiful, inspirational quotes with smooth animations
-- **Liquid Glass UI**: Modern glassmorphism design with subtle 3D effects
-- **Responsive Design**: Works perfectly on mobile, tablet, and desktop
-- **PWA Support**: Installable as a progressive web app
-
-### Hidden Features (After Login)
-- **Friend List**: Add and manage friends privately
-- **Ping System**: Three-level ping system (Green/Casual, Yellow/Important, Red/Urgent)
-- **Stealth Mode**: Login buried deep in settings menu
-- **Panic Logout**: Emergency clear with Ctrl + Alt + Q
-
-## Tech Stack
-
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom glassmorphism
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Storage**: LocalStorage (encrypted in production)
+- **Guest Mode**: Minimal quote display with frosted glass effects
+- **Hidden Login**: Access the full communication system
+- **Mood-Based Pinging**: Green (casual), Yellow (important), Red (urgent)
+- **Encrypted Local Storage**: Zero-server architecture
+- **Responsive Design**: Works on all devices
+- **Privacy Focused**: No public search, encrypted data
 
 ## Getting Started
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Run development server**:
-   ```bash
-   npm run dev
-   ```
-
-3. **Build for production**:
-   ```bash
-   npm run build
-   ```
-
-4. **Deploy to GitHub Pages**:
-   ```bash
-   npm run export
-   ```
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm start` to develop locally
+4. Run `npm run build` to create production build
+5. Run `npm run deploy` to deploy to GitHub Pages
 
 ## Usage
 
-### Public Access
-- Visit the site to see daily quotes
-- Click "New Quote" for fresh inspiration
-- Access settings via the gear icon (top right)
+1. Visit the site to see the quote display
+2. Click the settings cog in bottom-right
+3. Navigate to Miscellaneous > Login
+4. Enter username and passphrase (min 6 characters)
+5. Start pinging friends and sharing quotes!
 
-### Private Access
-1. Click Settings → More → Miscellaneous → Access Account
-2. Enter any username and passphrase (6+ characters)
-3. Access the hidden friend list and ping system
+## Security Features
 
-### Emergency Features
-- **Panic Logout**: Press `Ctrl + Alt + Q` to instantly clear all data and logout
-- **Duress Mode**: Special passphrase that silently wipes account data (future feature)
-
-## Design Philosophy
-
-Quotify follows "apple-level design aesthetics" with:
-- Meticulous attention to detail
-- Intuitive user experience
-- Clean, sophisticated visual presentation
-- Thoughtful micro-interactions and animations
-- Premium liquid glass effects
-
-## Privacy & Security
-
-- No public sign-up or discovery
-- Login deeply buried in settings
-- All data stored locally (encrypted in production)
-- Emergency logout capabilities
-- No tracking or analytics
-
-## Future Enhancements
-
-- Voice message pings
-- Encrypted cloud storage via GitHub API
-- Steganography for hidden messages
-- Advanced haptic feedback
-- GIF reactions and visual effects
-
-## License
-
-Private project - All rights reserved
+- Duress passphrase instantly wipes account
+- Panic shortcut: Ctrl + Alt + Q
+- Exponential backoff for failed login attempts
+- All data encrypted in localStorage
