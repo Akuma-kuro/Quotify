@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="guest-view">
+    <div class="main-container">
+        <!-- Quote Button -->
+        <div class="quote-container">
+            <button id="quoteButton" class="quote-pill">
+                <span class="quote-text" id="quoteText"></span>
+            </button>
+        </div>
+
+        <!-- Settings Cog -->
+        <button id="settingsCog" class="settings-cog">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m17-4a4 4 0 0 0-8 0m8 0a4 4 0 0 0-8 0M5 21a4 4 0 0 1 8 0m-8 0a4 4 0 0 1 8 0"></path>
+            </svg>
+        </button>
+
+        <!-- Settings Drawer -->
+        <div id="settingsDrawer" class="settings-drawer">
+            <div class="drawer-content">
+                <h3>Settings</h3>
+                
+                <div class="setting-item">
+                    <label>Theme</label>
+                    <button id="themeToggle" class="theme-toggle">
+                        <span class="theme-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="setting-item">
+                    <label>Font Size</label>
+                    <div class="font-size-controls">
+                        <button id="fontDecrease">A-</button>
+                        <button id="fontIncrease">A+</button>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <label>Share Link</label>
+                    <button id="shareButton" class="share-btn">Copy Link</button>
+                </div>
+
+                <details class="more-section">
+                    <summary>More</summary>
+                    <details class="misc-section">
+                        <summary>Miscellaneous</summary>
+                        <button id="loginButton" class="login-btn">Access Account</button>
+                    </details>
+                </details>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="login-modal">
+            <div class="login-content">
+                <h2>Account Access</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="passphrase" placeholder="Passphrase (6+ chars)" required minlength="6">
+                    <button type="submit">Enter</button>
+                </form>
+                <button id="closeLogin" class="close-btn">×</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
